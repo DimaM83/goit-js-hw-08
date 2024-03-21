@@ -1,0 +1,21 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.gallery-item {
+  width: calc(33.33% - 20px); /* Ширина элемента галереи (33.33% от ширины родителя) */
+  margin: 10px; /* Расстояние между элементами */
+  box-sizing: border-box; /* Учитывать отступы и границы внутри ширины элемента */
+}
+
+.gallery-link {
+  display: block;
+}
+
+.gallery-image {
+  width: 100%; /* Изображение занимает всю доступную ширину элемента */
+  height: auto; /* Поддерживает соотношение сторон */
+}
