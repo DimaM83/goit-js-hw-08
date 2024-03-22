@@ -6,9 +6,9 @@
 }
 
 .gallery-item {
-  width: calc(33.33% - 20px); /* Ширина элемента галереи (33.33% от ширины родителя) */
-  margin: 10px; /* Расстояние между элементами */
-  box-sizing: border-box; /* Учитывать отступы и границы внутри ширины элемента */
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 .gallery-link {
@@ -16,8 +16,8 @@
 }
 
 .gallery-image {
-  width: 100%; /* Изображение занимает всю доступную ширину элемента */
-  height: auto; /* Поддерживает соотношение сторон */
+  width: 100%;
+  height: auto; 
 }
 
 .gallery-image:hover {
