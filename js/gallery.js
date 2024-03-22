@@ -64,7 +64,6 @@ const images = [
   },
 ];
 
-
 const galleryContainer = document.querySelector(".gallery");
 
 const galleryItemsMarkup = images
@@ -80,3 +79,24 @@ const galleryItemsMarkup = images
   .join("");
 
 galleryContainer.innerHTML = galleryItemsMarkup;
+
+galleryContainer.addEventListener("click", handleGalleryItemClick);
+
+function handleGalleryItemClick(event) {
+  event.preventDefault();
+
+  const target = event.target;
+  if (target.nodeName !== "IMG") {
+    return;
+  }
+
+  const largeImageUrl = target.dataset.source;
+  console.log("Large image URL:", largeImageUrl);
+
+  const instance = basicLightbox.create(`
+    <div class="modal">
+        <img src="${largeImageUrl}" alt="Large Image">
+    </div>
+  `);
+  instance.show();
+}
